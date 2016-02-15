@@ -13,5 +13,5 @@ RUN apt-get update -y && \
 RUN cd /usr/local/src/ && hg clone https://bitbucket.org/chchrsc/rios
 RUN cd /usr/local/src/rios/rios/ && python setup.py install
 # download and install python fmask
-RUN cd /usr/local/src/ && hg clone https://bitbucket.org/chchrsc/python-fmask
+RUN cd /usr/local/src/ && hg clone https://amaurs@bitbucket.org/amaurs/python-fmask
 RUN cd /usr/local/src/python-fmask/ && python setup.py install
