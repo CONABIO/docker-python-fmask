@@ -7,8 +7,13 @@ USER root
 # install python dependencies
 RUN apt-get update -y && \
 	apt-get install -y \
-	mercurial \
+	gcc \
+	libffi-dev \
+	mercurial \	
+	python-dev \
+	python-setuptools \
 	python-scipy 
+RUN pip install gsutil
 # download and install rios
 RUN cd /usr/local/src/ && hg clone https://bitbucket.org/chchrsc/rios
 RUN cd /usr/local/src/rios/rios/ && python setup.py install
