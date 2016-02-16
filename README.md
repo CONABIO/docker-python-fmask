@@ -5,7 +5,7 @@ First of all we need to create the docker image from the Docker file:
 ```
 docker build -t python-fmask .
 ```
-Once the image is created we can use it to download and process the scenes. We can start with a simple example. To download the landsat scene:
+Once the image is created we can use it to download and process the scenes. We can start with a simple example. To download the landsat scene, we change the working directory. Once in the desired directory:
 
 ```
 docker run -v $(pwd):/data python-fmask gsutil -cp gs://earthengine-public/landsat/L7/026/046/LE70260462013004ASN00.tar.bz /data
@@ -20,3 +20,4 @@ docker run -v $(pwd):/data python-fmask fmask_usgsLandsatSaturationMask.py -i re
 docker run -v $(pwd):/data python-fmask fmask_usgsLandsatTOA.py -i ref.img -m *_MTL.txt -o toa.img
 docker run -v $(pwd):/data python-fmask fmask_usgsLandsatStacked.py -t thermal.img -a toa.img -m *_MTL.txt -s saturationmask.img -o cloud.img
 ```
+The cloud and shadow mask will be found in the current working directory under the name cloud.img.
