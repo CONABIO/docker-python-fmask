@@ -3,7 +3,7 @@
 To download a landsat scene:
 
 ```
-docker run -v $(pwd):/data python-fmask/v5 gsutil -cp gs://earthengine-public/landsat/L7/026/047/LE70260472009233EDC00.tar.bz /data
+docker run -v $(pwd):/data python-fmask/v5 gsutil -cp gs://earthengine-public/landsat/L7/026/046/LE70260462013004ASN00.tar.bz /data
 ```
 
 To perfom the image detection:
