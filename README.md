@@ -8,7 +8,7 @@ docker build -t python-fmask .
 Once the image is created we can use it to download and process the scenes. We can start with a simple example. To download the landsat scene, we change the working directory. Once in the desired directory:
 
 ```
-docker run -v $(pwd):/data python-fmask gsutil -cp gs://earthengine-public/landsat/L7/026/046/LE70260462013004ASN00.tar.bz /data
+docker run -v $(pwd):/data python-fmask gsutil cp gs://earthengine-public/landsat/L7/026/046/LE70260462013004ASN00.tar.bz /data
 ```
 
 After extracting the zip file, we move into the created directory and we perform the following commands to create an image with the detected shadows and clouds:
