@@ -27,12 +27,12 @@ The cloud and shadow mask will be found in the current working directory under t
 In Windows, Docker is only allowed to mount files that are found in the directory:
 
 ```
-C:\\\\Users
+C:\\Users
 ```
 So our working directory must be in that directory, for the sake of example, I created a directory called example:
 
 ```
-C:\\\\Users\\example
+C:\\Users\example
 ```
 
 Once that we are placed in that directory, the command becomes:
